@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ResumeAI | AI Resume Analyzer</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-file-circle-check"></i>
+
+            ResumeAI
+
+        </div>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#features">Features</a></li>
+
+            <li><a href="#upload">Analyze</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-left">
+
+            <h1>
+
+                Build an
+
+                <span>ATS-Friendly Resume</span>
+
+                That Gets You Hired
+
+            </h1>
+
+            <p>
+
+                Upload your resume and compare it with any Job Description.
+
+                Get ATS Score, Missing Skills, Keyword Match and Resume Suggestions instantly.
+
+            </p>
+
+            <a href="#upload" class="hero-btn">
+
+                Analyze My Resume
+
+            </a>
+
+        </div>
+
+        <div class="hero-right">
+
+            <div class="hero-card">
+
+                <div class="circle">
+                    95%
+                </div>
+
+                <h3>Average ATS Score Improvement</h3>
+
+                <p>
+
+                    Thousands of resumes analyzed using AI.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Upload Section -->
+
+    <section class="upload-section" id="upload">
+
+        <div class="upload-container">
+
+            <h2>
+
+                Analyze Your Resume
+
+            </h2>
+
+            <p>
+
+                Upload a PDF resume and paste the job description.
+
+            </p>
+
+            <form action="/upload"
+
+                method="POST"
+
+                enctype="multipart/form-data">
+
+                <div class="upload-box">
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    <h3>Upload Resume (PDF)</h3>
+
+                    <input
+                        type="file"
+                        id="resume"
+                        name="resume"
+                        accept=".pdf"
+                        required>
+
+                    <p id="fileName">No file selected</p>
+
+                </div>
+
+                <div class="jd-box">
+
+                    <label>
+
+                        Job Description
+
+                    </label>
+
+                    <textarea
+
+                        name="job_description"
+
+                        placeholder="Paste the complete Job Description here..."
+
+                        required></textarea>
+
+                </div>
+
+                <button type="submit">
+
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                    Analyze Resume
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    <section class="features" id="features">
+
+        <h2>
+
+            Why Choose ResumeAI?
+
+        </h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>ATS Score</h3>
+
+                <p>
+
+                    Check how ATS-friendly your resume is.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-key"></i>
+
+                <h3>Keyword Matching</h3>
+
+                <p>
+
+                    Match your resume with the Job Description.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+                <h3>Missing Skills</h3>
+
+                <p>
+
+                    Discover important keywords you missed.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <h3>AI Suggestions</h3>
+
+                <p>
+
+                    Improve your resume with smart recommendations.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Statistics -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+
+            <h2>1000+</h2>
+
+            <p>Resumes Analyzed</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>98%</h2>
+
+            <p>ATS Accuracy</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>24x7</h2>
+
+            <p>AI Availability</p>
+
+        </div>
+
+        <div class="stat-box">
+
+            <h2>50+</h2>
+
+            <p>Industries Supported</p>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <h2>
+
+            Ready to Improve Your Resume?
+
+        </h2>
+
+        <p>
+
+            Analyze your resume today and increase your chances of getting shortlisted.
+
+        </p>
+
+        <a href="#upload">
+
+            Get Started
+
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h3>
+
+            ResumeAI
+
+        </h3>
+
+        <p>
+
+            AI Powered Resume Analyzer using Flask & Machine Learning
+
+        </p>
+
+        <div class="footer-icons">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <i class="fa-brands fa-github"></i>
+
+            <i class="fa-solid fa-envelope"></i>
+
+        </div>
+
+        <p>
+
+            © 2026 ResumeAI. All Rights Reserved.
+
+        </p>
+
+    </footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
